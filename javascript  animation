@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    fieldset{
+        width: 200px;
+        border-radius: 50px;
+        margin-left: 200px;
+        margin-top: 230px;
+        background-color: greenyellow;
+        border: none;
+    }
+    fieldset button{
+        border-radius: 50px;
+        height: 30px;
+        width: 35px;
+        background-color: red;
+        border: none;
+        color: white;
+    }
+    fieldset #off{
+        background-color: blue;
+        margin-left: 125px;
+        display: none;
+    }
+    #ff{
+        width: 10px;
+        margin-left: -5px;
+        background-color: greenyellow;
+        color: greenyellow;
+    }
+</style>
+<body>
+    <fieldset id="field">
+        <button id="on">on</button>
+        <button id="ff">ff</button>
+    </fieldset>
+    <script>
+        document.querySelector('#on').onmouseover=function(){
+              document.querySelector('#on').style.marginLeft="148px";
+              document.querySelector("#on").style.transition="2s";
+              document.querySelector("#on").innerHTML="off";
+              document.querySelector("#on").style.backgroundColor="blue";
+        }
+        document.querySelector("#ff").onmouseover=function(){
+              document.querySelector("#on").style.marginLeft="-5px";
+              document.querySelector("#on").innerHTML="on";
+              document.querySelector("#on").style.backgroundColor="red";
+        }
+    </script>
+</body>
+</html>
